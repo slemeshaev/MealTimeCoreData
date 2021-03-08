@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		66E45BA825F64E580068EF48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E45BA725F64E580068EF48 /* AppDelegate.swift */; };
 		66E45BAA25F64E580068EF48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E45BA925F64E580068EF48 /* SceneDelegate.swift */; };
-		66E45BAC25F64E580068EF48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E45BAB25F64E580068EF48 /* ViewController.swift */; };
+		66E45BAC25F64E580068EF48 /* MealTimeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E45BAB25F64E580068EF48 /* MealTimeViewController.swift */; };
 		66E45BAF25F64E580068EF48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66E45BAD25F64E580068EF48 /* Main.storyboard */; };
 		66E45BB225F64E580068EF48 /* MealTimeCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 66E45BB025F64E580068EF48 /* MealTimeCoreData.xcdatamodeld */; };
 		66E45BB425F64E5B0068EF48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66E45BB325F64E5B0068EF48 /* Assets.xcassets */; };
@@ -20,7 +20,7 @@
 		66E45BA425F64E580068EF48 /* MealTimeCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealTimeCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66E45BA725F64E580068EF48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66E45BA925F64E580068EF48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		66E45BAB25F64E580068EF48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66E45BAB25F64E580068EF48 /* MealTimeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTimeViewController.swift; sourceTree = "<group>"; };
 		66E45BAE25F64E580068EF48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		66E45BB125F64E580068EF48 /* MealTimeCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MealTimeCoreData.xcdatamodel; sourceTree = "<group>"; };
 		66E45BB325F64E5B0068EF48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 			children = (
 				66E45BA725F64E580068EF48 /* AppDelegate.swift */,
 				66E45BA925F64E580068EF48 /* SceneDelegate.swift */,
-				66E45BAB25F64E580068EF48 /* ViewController.swift */,
+				66E45BAB25F64E580068EF48 /* MealTimeViewController.swift */,
 				66E45BAD25F64E580068EF48 /* Main.storyboard */,
 				66E45BB325F64E5B0068EF48 /* Assets.xcassets */,
 				66E45BB525F64E5B0068EF48 /* LaunchScreen.storyboard */,
@@ -140,7 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66E45BAC25F64E580068EF48 /* ViewController.swift in Sources */,
+				66E45BAC25F64E580068EF48 /* MealTimeViewController.swift in Sources */,
 				66E45BA825F64E580068EF48 /* AppDelegate.swift in Sources */,
 				66E45BB225F64E580068EF48 /* MealTimeCoreData.xcdatamodeld in Sources */,
 				66E45BAA25F64E580068EF48 /* SceneDelegate.swift in Sources */,
@@ -293,6 +293,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GWB2H668N;
 				INFOPLIST_FILE = MealTimeCoreData/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,7 +301,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.zamprog.MealTimeCoreData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,6 +313,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GWB2H668N;
 				INFOPLIST_FILE = MealTimeCoreData/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,7 +321,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ru.zamprog.MealTimeCoreData;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
