@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6628FE9D25F69804000389AF /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628FE9C25F69804000389AF /* CoreDataStack.swift */; };
 		66E45BA825F64E580068EF48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E45BA725F64E580068EF48 /* AppDelegate.swift */; };
 		66E45BAA25F64E580068EF48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E45BA925F64E580068EF48 /* SceneDelegate.swift */; };
 		66E45BAF25F64E580068EF48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66E45BAD25F64E580068EF48 /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6628FE9C25F69804000389AF /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		66E45BA425F64E580068EF48 /* MealTimeCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealTimeCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66E45BA725F64E580068EF48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66E45BA925F64E580068EF48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 			children = (
 				66E45BA725F64E580068EF48 /* AppDelegate.swift */,
 				66E45BA925F64E580068EF48 /* SceneDelegate.swift */,
+				6628FE9C25F69804000389AF /* CoreDataStack.swift */,
 				66E45BC225F6540C0068EF48 /* MealTimeViewController.swift */,
 				66E45BAD25F64E580068EF48 /* Main.storyboard */,
 				66E45BB325F64E5B0068EF48 /* Assets.xcassets */,
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6628FE9D25F69804000389AF /* CoreDataStack.swift in Sources */,
 				66E45BC325F6540C0068EF48 /* MealTimeViewController.swift in Sources */,
 				66E45BA825F64E580068EF48 /* AppDelegate.swift in Sources */,
 				66E45BB225F64E580068EF48 /* MealTimeCoreData.xcdatamodeld in Sources */,
