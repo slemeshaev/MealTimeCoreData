@@ -61,6 +61,50 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		6628FEAC25F6AB16000389AF /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				66E45BC225F6540C0068EF48 /* MealTimeViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6628FEAD25F6AB43000389AF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				66E45BB525F64E5B0068EF48 /* LaunchScreen.storyboard */,
+				66E45BAD25F64E580068EF48 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6628FEAF25F6AB8F000389AF /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				6628FEB025F6AB99000389AF /* Delegates */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		6628FEB025F6AB99000389AF /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				66E45BA725F64E580068EF48 /* AppDelegate.swift */,
+				66E45BA925F64E580068EF48 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		6628FEB125F6ABAE000389AF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6628FE9C25F69804000389AF /* CoreDataStack.swift */,
+				66E45BB825F64E5B0068EF48 /* Info.plist */,
+				66E45BB325F64E5B0068EF48 /* Assets.xcassets */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		66E45B9B25F64E580068EF48 = {
 			isa = PBXGroup;
 			children = (
@@ -80,15 +124,11 @@
 		66E45BA625F64E580068EF48 /* MealTimeCoreData */ = {
 			isa = PBXGroup;
 			children = (
-				66E45BA725F64E580068EF48 /* AppDelegate.swift */,
-				66E45BA925F64E580068EF48 /* SceneDelegate.swift */,
-				6628FE9C25F69804000389AF /* CoreDataStack.swift */,
-				66E45BC225F6540C0068EF48 /* MealTimeViewController.swift */,
-				66E45BAD25F64E580068EF48 /* Main.storyboard */,
-				66E45BB325F64E5B0068EF48 /* Assets.xcassets */,
-				66E45BB525F64E5B0068EF48 /* LaunchScreen.storyboard */,
-				66E45BB825F64E5B0068EF48 /* Info.plist */,
 				6628FEA925F69FCC000389AF /* CoreData */,
+				6628FEAD25F6AB43000389AF /* View */,
+				6628FEAC25F6AB16000389AF /* Controller */,
+				6628FEB125F6ABAE000389AF /* Helpers */,
+				6628FEAF25F6AB8F000389AF /* Protocols */,
 			);
 			path = MealTimeCoreData;
 			sourceTree = "<group>";
@@ -248,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -303,7 +343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -320,7 +360,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GWB2H668N;
-				INFOPLIST_FILE = MealTimeCoreData/Info.plist;
+				INFOPLIST_FILE = MealTimeCoreData/Helpers/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -340,7 +380,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5GWB2H668N;
-				INFOPLIST_FILE = MealTimeCoreData/Info.plist;
+				INFOPLIST_FILE = MealTimeCoreData/Helpers/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
