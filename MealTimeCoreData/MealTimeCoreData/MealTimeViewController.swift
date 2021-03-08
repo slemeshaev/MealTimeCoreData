@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class MealTimeViewController: UIViewController {
     
@@ -13,6 +14,7 @@ class MealTimeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    var context: NSManagedObjectContext!
     private var array = [Date]()
     private lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
