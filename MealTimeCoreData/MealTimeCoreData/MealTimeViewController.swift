@@ -15,7 +15,8 @@ class MealTimeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var context: NSManagedObjectContext!
-    private var array = [Date]()
+    private var user: User!
+    
     private lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateStyle = .short
@@ -27,18 +28,50 @@ class MealTimeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        setupTableView()
+        
+        let userName = "Dima"
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "name == %@", userName)
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            if results.isEmpty {
+                user = User(context: context)
+                user.name = userName
+                try context.save()
+            } else {
+                user = results.first
+            }
+        }
+        catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
     
     // MARK: - Actions
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        let date = Date()
-        array.append(date)
-        tableView.reloadData()
+        let meal = Meal(context: context)
+        meal.date = Date()
+        
+        let meals = user.meals?.mutableCopy() as? NSMutableOrderedSet
+        meals?.add(meal)
+        user.meals = meals
+        
+        do {
+            try context.save()
+            tableView.reloadData()
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
     
     // MARK: - Helpers
+    
+    private func setupTableView() {
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    }
 
 }
 
@@ -47,17 +80,18 @@ class MealTimeViewController: UIViewController {
 extension MealTimeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Время приема пищи"
+        return "My happy meal time"
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return array.count
+        return user.meals?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") else { return UITableViewCell() }
-        let date = array[indexPath.row]
-        cell.textLabel?.text = dateFormatter.string(from: date)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as UITableViewCell
+        guard let meal = user.meals?[indexPath.row] as? Meal, let mealDate = meal.date else { return cell }
+        
+        cell.textLabel?.text = dateFormatter.string(from: mealDate)
         return cell
     }
     
