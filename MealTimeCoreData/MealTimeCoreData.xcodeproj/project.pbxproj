@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		6628FE9D25F69804000389AF /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628FE9C25F69804000389AF /* CoreDataStack.swift */; };
+		6628FEA425F69E7C000389AF /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628FEA025F69E7C000389AF /* User+CoreDataClass.swift */; };
+		6628FEA525F69E7C000389AF /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628FEA125F69E7C000389AF /* User+CoreDataProperties.swift */; };
+		6628FEA625F69E7C000389AF /* Meal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628FEA225F69E7C000389AF /* Meal+CoreDataClass.swift */; };
+		6628FEA725F69E7C000389AF /* Meal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6628FEA325F69E7C000389AF /* Meal+CoreDataProperties.swift */; };
 		66E45BA825F64E580068EF48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E45BA725F64E580068EF48 /* AppDelegate.swift */; };
 		66E45BAA25F64E580068EF48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E45BA925F64E580068EF48 /* SceneDelegate.swift */; };
 		66E45BAF25F64E580068EF48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66E45BAD25F64E580068EF48 /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 
 /* Begin PBXFileReference section */
 		6628FE9C25F69804000389AF /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		6628FEA025F69E7C000389AF /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6628FEA125F69E7C000389AF /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		6628FEA225F69E7C000389AF /* Meal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataClass.swift"; sourceTree = "<group>"; };
+		6628FEA325F69E7C000389AF /* Meal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Meal+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		66E45BA425F64E580068EF48 /* MealTimeCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MealTimeCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66E45BA725F64E580068EF48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66E45BA925F64E580068EF48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +49,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6628FEA925F69FCC000389AF /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				66E45BB025F64E580068EF48 /* MealTimeCoreData.xcdatamodeld */,
+				6628FEA025F69E7C000389AF /* User+CoreDataClass.swift */,
+				6628FEA125F69E7C000389AF /* User+CoreDataProperties.swift */,
+				6628FEA225F69E7C000389AF /* Meal+CoreDataClass.swift */,
+				6628FEA325F69E7C000389AF /* Meal+CoreDataProperties.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		66E45B9B25F64E580068EF48 = {
 			isa = PBXGroup;
 			children = (
@@ -68,7 +88,7 @@
 				66E45BB325F64E5B0068EF48 /* Assets.xcassets */,
 				66E45BB525F64E5B0068EF48 /* LaunchScreen.storyboard */,
 				66E45BB825F64E5B0068EF48 /* Info.plist */,
-				66E45BB025F64E580068EF48 /* MealTimeCoreData.xcdatamodeld */,
+				6628FEA925F69FCC000389AF /* CoreData */,
 			);
 			path = MealTimeCoreData;
 			sourceTree = "<group>";
@@ -145,8 +165,12 @@
 			files = (
 				6628FE9D25F69804000389AF /* CoreDataStack.swift in Sources */,
 				66E45BC325F6540C0068EF48 /* MealTimeViewController.swift in Sources */,
+				6628FEA425F69E7C000389AF /* User+CoreDataClass.swift in Sources */,
+				6628FEA525F69E7C000389AF /* User+CoreDataProperties.swift in Sources */,
 				66E45BA825F64E580068EF48 /* AppDelegate.swift in Sources */,
+				6628FEA725F69E7C000389AF /* Meal+CoreDataProperties.swift in Sources */,
 				66E45BB225F64E580068EF48 /* MealTimeCoreData.xcdatamodeld in Sources */,
+				6628FEA625F69E7C000389AF /* Meal+CoreDataClass.swift in Sources */,
 				66E45BAA25F64E580068EF48 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
