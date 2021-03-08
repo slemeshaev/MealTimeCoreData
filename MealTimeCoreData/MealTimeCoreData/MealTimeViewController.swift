@@ -29,24 +29,7 @@ class MealTimeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        
-        let userName = "Dima"
-        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
-        fetchRequest.predicate = NSPredicate(format: "name == %@", userName)
-        
-        do {
-            let results = try context.fetch(fetchRequest)
-            if results.isEmpty {
-                user = User(context: context)
-                user.name = userName
-                try context.save()
-            } else {
-                user = results.first
-            }
-        }
-        catch let error as NSError {
-            print(error.localizedDescription)
-        }
+        fetchMealTime(forUser: "Dima")
     }
     
     // MARK: - Actions
@@ -72,6 +55,26 @@ class MealTimeViewController: UIViewController {
     private func setupTableView() {
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
+    
+    private func fetchMealTime(forUser name: String) {
+        let userName = name
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "name == %@", userName)
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            if results.isEmpty {
+                user = User(context: context)
+                user.name = userName
+                try context.save()
+            } else {
+                user = results.first
+            }
+        }
+        catch let error as NSError {
+            print(error.localizedDescription)
+        }
+    }
 
 }
 
@@ -93,6 +96,18 @@ extension MealTimeViewController: UITableViewDataSource {
         
         cell.textLabel?.text = dateFormatter.string(from: mealDate)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard let meal = user.meals?[indexPath.row] as? Meal, editingStyle == .delete else { return }
+        context.delete(meal)
+        
+        do {
+            try context.save()
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        } catch let error as NSError {
+            print(error.localizedDescription)
+        }
     }
     
     
